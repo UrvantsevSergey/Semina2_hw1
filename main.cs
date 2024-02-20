@@ -4,16 +4,12 @@ class Program
 {
   public static void Main (string[] args) 
   {
-    int num = 1;
-    while (num != 0)
+    Console.Write("Введите число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+    if (number%7 == 0 && number%23 == 0)
     {
-      Console.WriteLine("Введите число ");
-      num = Convert.ToInt32(Console.ReadLine());
-      if (num%7 == 0 && num%2 == 0)
-      {
-        Console.WriteLine($" {num} ");
-      }
+      Console.WriteLine($"Число {number} делится на 7 и 23");
     }
-    
+    else Console.WriteLine($"Число {number} НЕ делится на 7 и 23");
   }
 }
